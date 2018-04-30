@@ -21,5 +21,5 @@ $ yarn add @gustavoquinalha/forms-css -D
 ```
 or
 ```
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gustavoquinalha/forms-css@1.0.0/assets/css/forms.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/forms-css@1.0.0/assets/css/forms.min.css">
 ```
