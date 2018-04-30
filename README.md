@@ -1,0 +1,25 @@
+
+<div align="center">
+<h1>Buttons.css</h1>
+<p>Simple CSS for buttons and dropdowns.</p>
+<img src="https://img.shields.io/badge/version-1.0.0-green.svg">
+<img src="https://img.shields.io/github/issues/gustavoquinalha/forms-css.svg">
+<img src="https://img.shields.io/github/license/gustavoquinalha/forms-css.svg">
+</div>
+
+# Demos
+- [Online Demo](http://quinalha.me/forms-css/)
+- [Documentation](http://quinalha.me/forms-css/#install)
+- [Codepen Demo](https://codepen.io/gustavoquinalha/pen/paaKxq?editors=1100)
+
+# Install
+```
+$ npm i @gustavoquinalha/forms-css -D
+```
+```
+$ yarn add @gustavoquinalha/forms-css -D
+```
+or
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gustavoquinalha/forms-css@1.0.0/assets/css/forms.min.css">
+```
