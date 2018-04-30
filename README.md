@@ -10,14 +10,13 @@
 # Demos
 - [Online Demo](http://quinalha.me/forms-css/)
 - [Documentation](http://quinalha.me/forms-css/#install)
-- [Codepen Demo](https://codepen.io/gustavoquinalha/pen/paaKxq?editors=1100)
 
 # Install
 ```
 $ npm i @gustavoquinalha/forms-css -D
 ```
 ```
-$ yarn add @gustavoquinalha/forms-css -D
+$ yarn add @gustavoquinalha/forms-css
 ```
 or
 ```
