@@ -111,33 +111,26 @@
           </div>
           <form class="form-content margin-bottom-20">
             <div class="form-group">
-              <label class="label-control" for="">Name</label>
-              <input type="text" class="form-control" id="" placeholder="Enter name" required>
+              <label class="label-control label-control_sm" for="">Username/email</label>
+              <div class="form-block form-control">
+                <div class="form-control__icon">
+                  <i class="fas fa-user"></i>
+                </div>
+                <input type="email" class="" placeholder="Ex: name@email.com">
+              </div>
             </div>
             <div class="form-group">
-              <label class="label-control" for="">Email address</label>
-              <input type="email" class="form-control" id="" placeholder="Enter email" required>
+              <label class="label-control label-control_sm" for="">Password</label>
+              <div class="form-block form-control">
+                <div class="form-control__icon">
+                  <i class="fas fa-unlock"></i>
+                </div>
+                <input type="password" class="" placeholder="*********">
+              </div>
             </div>
-
-            <div class="form-group">
-              <label class="label-control" for="">Example select</label>
-              <select class="form-control">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label class="label-control" for="">Message</label>
-              <textarea name="name" class="form-control" rows="4" placeholder="Enter message"></textarea>
-            </div>
-
             <div class="form-group">
               <div class="container justify-content-end full-width">
-                <button href="" class="btn btn-primary">Send</button>
+                <button href="" class="btn btn-primary">Login</button>
               </div>
             </div>
           </form>
@@ -151,17 +144,17 @@
             <p class="type">NPM</p>
             <div class="example margin-bottom-20">
               <pre><code class="shell" id="npm">$ npm i forms-css -D</code></pre>
-              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#npm"><span class="feather-icon icon-clipboard"></span></button>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#npm"><i class="far fa-copy"></i></button>
             </div>
             <p class="type">Yarn</p>
             <div class="example margin-bottom-20">
               <pre><code class="shell" id="yarn">$ yarn add forms-css</code></pre>
-              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#yarn"><span class="feather-icon icon-clipboard"></span></button>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#yarn"><i class="far fa-copy"></i></button>
             </div>
             <p class="type">jsdelivr</p>
             <div class="example">
               <pre><code class="html" id="jsdelivr">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/forms-css@1.0.0/assets/css/forms-css.min.css&quot;&gt;</code></pre>
-              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#jsdelivr"><span class="feather-icon icon-clipboard"></span></button>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#jsdelivr"><i class="far fa-copy"></i></button>
             </div>
           </div>
         </div>
@@ -170,64 +163,213 @@
           <div class="box-title">
             <h2>Type</h2>
           </div>
-          <div class="margin-bottom-10">
-            <small>Type column</small>
-          </div>
-          <form class="form-content margin-bottom-20">
-            <div class="form-group">
-              <label class="label-control" for="example1">Name</label>
-              <input type="email" class="form-control" id="example1" placeholder="Enter name">
-            </div>
-            <div class="form-group">
-              <label class="label-control" for="example1">Email address</label>
-              <input type="email" class="form-control" id="example1" placeholder="Enter email">
-            </div>
-          </form>
 
-          <div class="margin-bottom-10">
-            <small>Type row</small>
+          <div class="margin-top-30">
+            <div class="margin-bottom-10">
+              <small>Type column</small>
+            </div>
+            <form class="form-content margin-bottom-20">
+              <div class="form-group">
+                <label class="label-control" for="example1">Name</label>
+                <input type="email" class="form-control" placeholder="Enter name">
+              </div>
+              <div class="form-group">
+                <label class="label-control" for="example1">Email address</label>
+                <input type="email" class="form-control" placeholder="Enter email">
+              </div>
+            </form>
+            <div class="example">
+              <pre><code class="html" id="input-type-column">&lt;form class=&quot;form-content&quot;&gt;
+                
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;label-control&quot; for=&quot;example1&quot;&gt;Name&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;form-control&quot; placeholder=&quot;Enter name&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;label-control&quot; for=&quot;example1&quot;&gt;Email address&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;form-control&quot; placeholder=&quot;Enter email&quot;&gt;
+  &lt;/div&gt;
+  
+&lt;/form&gt;</code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#input-type-column"><i class="far fa-copy"></i></button>
+            </div>
           </div>
-          <form class="form-content margin-bottom-20">
-            <div class="form-group form-group_row">
-              <label class="label-control" for="example1">Name</label>
-              <input type="email" class="form-control" id="example1" placeholder="Enter name">
+
+          <div class="margin-top-30">
+            <div class="margin-bottom-10">
+              <small>Type row</small>
             </div>
-            <div class="form-group form-group_row">
-              <label class="label-control" for="example1">Email address</label>
-              <input type="email" class="form-control" id="example1" placeholder="Enter email">
+            <form class="form-content margin-bottom-20">
+              <div class="form-group form-group_row">
+                <label class="label-control" for="example1">Name</label>
+                <input type="email" class="form-control" placeholder="Enter name">
+              </div>
+              <div class="form-group form-group_row">
+                <label class="label-control" for="example1">Email address</label>
+                <input type="email" class="form-control" placeholder="Enter email">
+              </div>
+            </form>
+            <div class="example">
+              <pre><code class="html" id="input-type-row">&lt;form class=&quot;form-content&quot;&gt;
+                
+  &lt;div class=&quot;form-group form-group_row&quot;&gt;
+    &lt;label class=&quot;label-control&quot; for=&quot;example1&quot;&gt;Name&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;form-control&quot; placeholder=&quot;Enter name&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;form-group form-group_row&quot;&gt;
+    &lt;label class=&quot;label-control&quot; for=&quot;example1&quot;&gt;Email address&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;form-control&quot; placeholder=&quot;Enter email&quot;&gt;
+  &lt;/div&gt;
+  
+&lt;/form&gt;</code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#input-type-row"><i class="far fa-copy"></i></button>
             </div>
-          </form>
+          </div>
         </div>
 
         <div class="content margin-top-50" id="sizes">
           <div class="box-title">
             <h2>Sizes</h2>
           </div>
-          <form class="form-content margin-bottom-20">
-            <div class="form-group">
-              <label class="label-control label-control_sm" for="">Name</label>
-              <input type="email" class="form-control form-control_sm" id="" placeholder="Enter name">
+
+          <div class="">
+            <form class="form-content margin-bottom-10">
+              <div class="form-group">
+                <label class="label-control label-control_sm" for="">Name</label>
+                <input type="email" class="form-control form-control_sm" placeholder="Enter name">
+              </div>
+            </form>
+            <div class="example">
+              <pre><code class="html" id="input-type-row">&lt;form class=&quot;form-content&quot;&gt;
+                
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;label-control label-control_sm&quot; for=&quot;&quot;&gt;Name&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;form-control form-control_sm&quot; placeholder=&quot;Enter name&quot;&gt;
+  &lt;/div&gt;
+  
+&lt;/form&gt;</code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#input-type-row"><i class="far fa-copy"></i></button>
             </div>
-            <div class="form-group">
+          </div>
+
+          <div class="margin-top-20">
+            <form class="form-content margin-bottom-10">
+              <div class="form-group">
+                <label class="label-control" for="">Name</label>
+                <input type="email" class="form-control" placeholder="Enter name">
+              </div>
+            </form>
+            <div class="example">
+              <pre><code class="html" id="input-type-row">&lt;form class=&quot;form-content&quot;&gt;
+                
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;label-control&quot; for=&quot;&quot;&gt;Name&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;form-control&quot; placeholder=&quot;Enter name&quot;&gt;
+  &lt;/div&gt;
+  
+&lt;/form&gt;</code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#input-type-row"><i class="far fa-copy"></i></button>
+            </div>
+          </div>
+
+          <div class="margin-top-20">
+            <form class="form-content margin-bottom-10">
+              <div class="form-group">
+                <label class="label-control label-control_lg" for="">Name</label>
+                <input type="email" class="form-control form-control_lg" placeholder="Enter name">
+              </div>
+            </form>
+            <div class="example">
+              <pre><code class="html" id="input-type-row">&lt;form class=&quot;form-content&quot;&gt;
+                
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;label-control label-control_lg&quot; for=&quot;&quot;&gt;Name&lt;/label&gt;
+    &lt;input type=&quot;email&quot; class=&quot;form-control form-control_lg&quot; placeholder=&quot;Enter name&quot;&gt;
+  &lt;/div&gt;
+  
+&lt;/form&gt;</code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#input-type-row"><i class="far fa-copy"></i></button>
+            </div>
+          </div>
+
+
+
+          <!-- <div class="form-group">
               <label class="label-control" for="">Name</label>
-              <input type="email" class="form-control" id="" placeholder="Enter name">
+              <input type="email" class="form-control" placeholder="Enter name">
             </div>
             <div class="form-group">
               <label class="label-control label-control_lg" for="">Name</label>
-              <input type="email" class="form-control form-control_lg" id="" placeholder="Enter name">
+              <input type="email" class="form-control form-control_lg" placeholder="Enter name">
+            </div> -->
+        </div>
+
+        <div class="content margin-top-50" id="icons">
+          <div class="box-title">
+            <h2>Icons</h2>
+          </div>
+          <div class="">
+            <form class="form-content margin-bottom-20">
+              <div class="form-group">
+                <label class="label-control label-control_sm" for="">Username/email</label>
+                <div class="form-block form-control">
+                  <div class="form-control__icon">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <input type="email" class="" placeholder="Ex: myname@email.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="label-control label-control_sm" for="">Password</label>
+                <div class="form-block form-control">
+                  <div class="form-control__icon">
+                    <i class="fas fa-unlock"></i>
+                  </div>
+                  <input type="password" class="" placeholder="*********">
+                </div>
+              </div>
+            </form>
+            <div class="example">
+              <pre><code class="html" id="input-type-row">&lt;form class=&quot;form-content&quot;&gt;
+                
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;label-control label-control_sm&quot; for=&quot;&quot;&gt;Username/email&lt;/label&gt;
+    &lt;div class=&quot;form-block form-control&quot;&gt;
+      &lt;div class=&quot;form-control__icon&quot;&gt;
+        &lt;i class=&quot;fas fa-user&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;input type=&quot;email&quot; class=&quot;&quot; placeholder=&quot;Ex: myname@email.com&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label class=&quot;label-control label-control_sm&quot; for=&quot;&quot;&gt;Password&lt;/label&gt;
+    &lt;div class=&quot;form-block form-control&quot;&gt;
+      &lt;div class=&quot;form-control__icon&quot;&gt;
+        &lt;i class=&quot;fas fa-unlock&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;input type=&quot;password&quot; class=&quot;&quot; placeholder=&quot;*********&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+&lt;/form&gt;</code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#input-type-row"><i class="far fa-copy"></i></button>
             </div>
-          </form>
+          </div>
         </div>
 
         <div class="content margin-top-50" id="feedback">
           <div class="box-title">
             <h2>Feedback</h2>
           </div>
-          <form class="form-content margin-bottom-20">
+          <!-- <form class="form-content margin-bottom-20">
             <div class="form-group form-group_feedback form-group_success">
               <label class="label-control" for="">Email adress</label>
-              <div class="form-block">
-                <input type="email" class="form-control" id="" placeholder="Enter email" value="seunome@gmail.com">
+              <div class="form-block form-control">
+                <div class="form-control__icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <input type="email" class="" placeholder="Enter email" value="seunome@gmail.com">
                 <span class="form-feedback-icon form-feedback-icon_lg"><i class="fas fa-check-circle"></i></span>
               </div>
               <span class="form-feedback">Email válido!</span>
@@ -235,22 +377,118 @@
 
             <div class="form-group form-group_feedback form-group_error">
               <label class="label-control" for="">Email adress</label>
-              <div class="form-block">
-                <input type="email" class="form-control" id="" placeholder="Enter email" value="dhasudasiudhsa">
+              <div class="form-block form-control">
+                <div class="form-control__icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <input type="email" class="" placeholder="Enter email" value="dhasudasiudhsa">
                 <span class="form-feedback-icon form-feedback-icon_lg"><i class="fas fa-times-circle"></i></span>
               </div>
               <span class="form-feedback">Digite um email válido!</span>
             </div>
 
-            <div class="form-group form-group_feedback form-group_warning">
-              <label class="label-control" for="">Email adress</label>
-              <div class="form-block">
-                <input type="email" class="form-control" id="" placeholder="Enter email" value="dhasudasiudhsa">
-                <span class="form-feedback-icon form-feedback-icon_lg"><i class="fas fa-exclamation-circle"></i></span>
+            
+          </form> -->
+
+          <div class="">
+            <form class="form-content margin-bottom-10">
+              <div class="form-group form-group_feedback form-group_success">
+                <label class="label-control" for="">Email adress</label>
+                <div class="form-block form-control">
+                  <div class="form-control__icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <input type="email" class="" placeholder="Enter email">
+                  <span class="form-feedback-icon form-feedback-icon_lg"><i class="fas fa-check-circle"></i></span>
+                </div>
+                <span class="form-feedback">Email válido!</span>
               </div>
-              <span class="form-feedback">Digite um email válido!</span>
+            </form>
+            <div class="example">
+              <pre><code class="html" id="input-type-row">&lt;form class=&quot;form-content&quot;&gt;
+                
+  &lt;div class=&quot;form-group form-group_feedback form-group_success&quot;&gt;
+    &lt;label class=&quot;label-control&quot; for=&quot;&quot;&gt;Email adress&lt;/label&gt;
+    &lt;div class=&quot;form-block form-control&quot;&gt;
+      &lt;div class=&quot;form-control__icon&quot;&gt;
+        &lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt;
+      &lt;/div&gt;
+      &lt;input type=&quot;email&quot; class=&quot;&quot; placeholder=&quot;Enter email&quot;&gt;
+      &lt;span class=&quot;form-feedback-icon form-feedback-icon_lg&quot;&gt;&lt;i class=&quot;fas fa-check-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;form-feedback&quot;&gt;Email v&aacute;lido!&lt;/span&gt;
+  &lt;/div&gt;
+  
+&lt;/form&gt;</code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#input-type-row"><i class="far fa-copy"></i></button>
             </div>
-          </form>
+          </div>
+
+          <div class="margin-top-30">
+            <form class="form-content margin-bottom-10">
+              <div class="form-group form-group_feedback form-group_error">
+                <label class="label-control" for="">Email adress</label>
+                <div class="form-block form-control">
+                  <div class="form-control__icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <input type="email" class="" placeholder="Enter email">
+                  <span class="form-feedback-icon form-feedback-icon_lg"><i class="fas fa-times-circle"></i></span>
+                </div>
+                <span class="form-feedback">Digite um email válido!</span>
+              </div>
+            </form>
+            <div class="example">
+              <pre><code class="html" id="input-type-row">&lt;div class=&quot;form-group form-group_feedback form-group_error&quot;&gt;
+                
+  &lt;label class=&quot;label-control&quot; for=&quot;&quot;&gt;Email adress&lt;/label&gt;
+  &lt;div class=&quot;form-block form-control&quot;&gt;
+    &lt;div class=&quot;form-control__icon&quot;&gt;
+      &lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;input type=&quot;email&quot; class=&quot;&quot; placeholder=&quot;Enter email&quot;&gt;
+    &lt;span class=&quot;form-feedback-icon form-feedback-icon_lg&quot;&gt;&lt;i class=&quot;fas fa-times-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;form-feedback&quot;&gt;Digite um email v&aacute;lido!&lt;/span&gt;
+  
+&lt;/div&gt;</code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#input-type-row"><i class="far fa-copy"></i></button>
+            </div>
+          </div>
+
+          <div class="margin-top-30">
+            <form class="form-content margin-bottom-10">
+              <div class="form-group form-group_feedback form-group_warning">
+                <label class="label-control" for="">Email adress</label>
+                <div class="form-block form-control">
+                  <div class="form-control__icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <input type="email" class="" placeholder="Enter email">
+                  <span class="form-feedback-icon form-feedback-icon_lg"><i class="fas fa-exclamation-circle"></i></span>
+                </div>
+                <span class="form-feedback">Digite um email válido!</span>
+              </div>
+            </form>
+            <div class="example">
+              <pre><code class="html" id="input-type-row">&lt;div class=&quot;form-group form-group_feedback form-group_warning&quot;&gt;
+                
+  &lt;label class=&quot;label-control&quot; for=&quot;&quot;&gt;Email adress&lt;/label&gt;
+  &lt;div class=&quot;form-block form-control&quot;&gt;
+    &lt;div class=&quot;form-control__icon&quot;&gt;
+      &lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;input type=&quot;email&quot; class=&quot;&quot; placeholder=&quot;Enter email&quot;&gt;
+    &lt;span class=&quot;form-feedback-icon form-feedback-icon_lg&quot;&gt;&lt;i class=&quot;fas fa-exclamation-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;span class=&quot;form-feedback&quot;&gt;Digite um email v&aacute;lido!&lt;/span&gt;
+  
+&lt;/div&gt;</code></pre>
+              <button type="button" name="button" class="btn btn-link btn-example" data-clipboard-target="#input-type-row"><i class="far fa-copy"></i></button>
+            </div>
+          </div>
+          
+          
         </div>
 
 

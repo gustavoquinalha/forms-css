@@ -1,13 +1,18 @@
 // colors
-$color-white: #ffffff;
+$color-white: #F2F2F2;
 $color-grey: #dddddd;
 $color-dark: #2f3542;
+$color-black: #333333;
+
+$color-form: rgba(14,20,26,0.05);
+$color-form-hover: rgba(14,20,26,0.1);
 
 $color-primary: #3742fa;
 
 $color-warning: #ffa502;
 $color-danger: #ff4757;
 $color-success: #2ed573;
+$color-info: #71c9ff;
 
 // sizes
 $radius: 4px;
@@ -70,8 +75,10 @@ $size-lg: 20px;
 // input
 .form-control {
   transition: 0.3s;
-  border: 1px solid $color-grey;
-  background: $color-white;
+  border: none;
+  background: $color-form;
+  box-shadow: inset 0 0 5px 0 rgba(0,0,0,.03);
+  color: $color-dark;
   padding: 15px;
   box-sizing: border-box;
   border-radius: $radius;
@@ -81,7 +88,7 @@ $size-lg: 20px;
   height: 50px;
 
   &_sm {
-    padding: 5px;
+    padding: 5px 10px;
     font-size: $size-sm;
     height: 35px;
   }
@@ -96,11 +103,13 @@ $size-lg: 20px;
 // label
 .label-control {
   color: $color-dark;
+  opacity: 0.5;
   transition: 0.3s;
   margin: 5px;
   white-space: nowrap;
   width: 100%;
   font-size: $size-md;
+  transition: 0.3s;
 
   &_sm {
     font-size: $size-sm;
@@ -113,59 +122,16 @@ $size-lg: 20px;
 
 // focus 
 .form-control:focus {
-  box-shadow: 0 0 1px 1px $color-primary;
-  border-radius: $radius;
+  background: $color-form-hover;
 }
 
 .form-group:focus-within {
-  .label-control {
-    color: $color-primary;
-  }
-
   .form-control {
-    color: $color-primary;
-  }
-}
-
-// Feedback
-.form-group_feedback {
-  &.form-group_success {
-    color: $color-success;
-
-    .label-control {
-      color: $color-success!important;
-    }
-
-    .form-control {
-      box-shadow: 0 0 1px 1px $color-success;
-      color: $color-success!important;
-    }
+    background: $color-form-hover;
   }
 
-  &.form-group_error {
-    color: $color-danger;
-
-    .label-control {
-      color: $color-danger!important;
-    }
-
-    .form-control {
-      box-shadow: 0 0 1px 1px $color-danger;
-      color: $color-danger!important;
-    }
-  }
-
-  &.form-group_warning {
-    color: $color-warning;
-
-    .label-control {
-      color: $color-warning!important;
-    }
-
-    .form-control {
-      box-shadow: 0 0 1px 1px $color-warning;
-      color: $color-warning!important;
-    }
+  .label-control {
+    opacity: 1;
   }
 }
 
@@ -173,7 +139,6 @@ $size-lg: 20px;
   margin: 5px;
   text-align: left;
   width: 100%;
-  font-size: 12px;
 }
 
 .form-feedback-icon {
@@ -220,72 +185,78 @@ textarea.form-control {
   height: auto;
 }
 
-//Radio
-.form-group {
-  &_radio,
-  &_select {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: baseline;
+.form-block.form-control {
+  display: flex;
+  align-items: baseline;
 
-    .label-control {
-      width: auto;
-      margin: 0 10px;
+  input {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    margin-left: 10px;
+    color: $color-dark;
+    font-size: $size-md;
+
+  }
+
+  &_sm input {
+    font-size: $size-sm;
+  }
+
+  &_lg input {
+    font-size: $size-lg;
+  }
+
+  .form-control__icon {
+    transition: 0.3s;
+    opacity: 0.5;
+  }
+
+  &:focus-within {
+    .form-control__icon {
+      opacity: 1;
     }
   }
 }
 
-.form-group_select {
-  .form-group-container {
-    display: flex;
-    align-items: center;
-  }
+// Feedback
+.form-group_feedback {
+  &.form-group_success {
+    color: $color-success;
 
-  input {
-    display: none;
-  }
+    .form-feedback-icon {
+      color: $color-success;
+    }
 
-  .form-control_select {
-    cursor: pointer;
-    height: 25px;
-    width: 25px;
-    background-color: $color-white;
-    border: 1px solid $color-grey;
-    position: relative;
-    border-radius: $radius;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-    color: $color-white;
-    font-size: $size-sm;
-
-    &.radio {
-      border-radius: 50%;
+    .form-control {
+      background: lighten($color-success, 40);
     }
   }
 
-  .text {
-    margin-left: 10px;
-    cursor: pointer;
+  &.form-group_error {
+    color: $color-danger;
+
+    .form-feedback-icon {
+      color: $color-danger;
+    }
+
+    .form-control {
+      background: lighten($color-danger, 30);
+    }
   }
 
-  .form-group-container:hover input ~ .form-control_select {
-    background-color: $color-grey;
-  }
+  &.form-group_warning {
+    color: $color-warning;
 
-  .form-group-container input ~ .form-control_select .fas {
-    opacity: 0;
-    transition: 0.3s;
-  }
+    .form-feedback-icon {
+      color: $color-warning;
+    }
 
-  .form-group-container input:checked ~ .form-control_select .fas {
-    opacity: 1;
+    .form-control {
+      background: lighten($color-warning, 40);
+    }
   }
-
-  .form-group-container input:checked ~ .form-control_select {
-    background-color: $color-primary;
-    border: 1px solid $color-primary;
-  }
-
 }
